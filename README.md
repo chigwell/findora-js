@@ -12,7 +12,7 @@ JavaScript wrapper for LLM-powered web search using `langchain-llm7` and `llmatc
 ## Installation
 
 ```bash
-npm install findora-js
+npm install findora
 ````
 
 ---
@@ -20,7 +20,7 @@ npm install findora-js
 ## Usage
 
 ```js
-import Findora from 'findora-js';
+import Findora from 'findora';
 
 const findora = new Findora();
 
