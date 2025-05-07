@@ -1,0 +1,21 @@
+{
+  "name": "findora",
+  "version": "2025.5.71321",
+  "description": "LLM-powered web search wrapper with structured JSON output",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "langchain-llm7": "^2025.4.291003",
+    "llmatch-js": "^2025.5.61133"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.14",
+    "typescript": "^5.8.3"
+  }
+}
