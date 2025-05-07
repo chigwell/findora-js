@@ -1,6 +1,6 @@
 {
   "name": "findora",
-  "version": "2025.5.71327",
+  "version": "2025.5.71527",
   "description": "LLM-powered web search wrapper with structured JSON output",
   "type": "module",
   "main": "src/index.js",

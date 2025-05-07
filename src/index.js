@@ -18,7 +18,7 @@ export class Findora {
 
     const result = await llmatch({
       llm,
-      query: `Search about: ${query}. Return JSON in format {"results":[{"name":"","url":"","description":""}]} with 10 results please.`,
+      query: `Search about: "${query}". Return JSON in format {"results":[{"name":"","url":"","description":""}]} with 10 results please.`,
       pattern: /```json\n([\s\S]*?)```/,
       verbose: false,
     });
