@@ -24,11 +24,26 @@ export class Findora {
     });
 
     if (result.success) {
-      const parsed = JSON.parse(result.extractedData[0]);
-      return parsed.results || [];
-    } else {
-      throw new Error(result.errorMessage || 'Unknown extraction error');
+      const rawJson = result.extractedData[0].trim();
+
+      try {
+        const parsed = JSON.parse(rawJson);
+
+        if (Array.isArray(parsed)) {
+          return parsed; // handle case where model returns an array directly
+        } else if (parsed && Array.isArray(parsed.results)) {
+          return parsed.results;
+        } else {
+          console.error('Parsed JSON structure is not recognized:', parsed);
+          return [];
+        }
+      } catch (err) {
+        console.error('Failed to parse extracted JSON:', rawJson);
+        console.error('Parse error:', err.message);
+        return [];
+      }
     }
+
   }
 }
 
