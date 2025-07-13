@@ -2,13 +2,12 @@ import { ChatLLM7 } from 'langchain-llm7';
 import { llmatch } from 'llmatch-js';
 
 export class Findora {
-  constructor(modelName = 'searchgpt') {
+  constructor(modelName = 'elixposearch') {
     this.chat = new ChatLLM7({ modelName });
   }
 
   async search(query) {
     if (!query.trim()) throw new Error('Empty query provided');
-
     const llm = {
       invoke: async (messages, options = {}) => {
         const response = await this.chat.invoke(messages);
